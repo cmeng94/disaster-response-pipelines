@@ -7,9 +7,12 @@ def load_data(messages_filepath, categories_filepath):
     '''
     The load_data function loads respective data sets.
 
-    Input  - messages_filepath: path to data set containing disaster response messages
-             categories_filepath: path to data set containing categories of the messages
-    Output - df: pandas DataFrame that merges the two input data sets on "id"
+    Input:
+    messages_filepath: path to data set containing disaster response messages
+    categories_filepath: path to data set containing categories of the messages
+
+    Output:
+    df: pandas DataFrame that merges the two input data sets on "id"
     '''
 
     # load data sets
@@ -24,11 +27,15 @@ def clean_data(df):
 
     '''
     The function cleans the input data.
-    Input  - df: pandas DataFrame to be cleaned
-    Output - df: the cleaned pandas DataFrame, steps include 
-                    1) splitting the categories column into separate columns
-                    2) convert values to binary
-                    3) remove duplicates
+
+    Input:
+    df: pandas DataFrame to be cleaned
+    
+    Output:
+    df: the cleaned pandas DataFrame, steps include 
+        1) splitting the categories column into separate columns
+        2) convert values to binary
+        3) remove duplicates
     '''
 
     # split categories columns
@@ -57,8 +64,10 @@ def save_data(df, database_filename):
 
     '''
     The function saves cleaned data.
-    Input  - df: cleaned data
-             database_filename: path for saved data set
+    Input:
+    df: cleaned data
+    database_filename: path for saved data set
+    
     Output - None
     '''
 

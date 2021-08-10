@@ -25,15 +25,19 @@ import pickle
 
 def load_data(database_filepath):
 
-	'''
-	The function loads cleaned data set.
-	Input  - database_filepath: path to cleaned data set
-	Output - X: column of loaded data set containing messages
-	         Y: columns of loaded data set containing categories of messages
-	         category_names: names of categories
-	'''
+    '''
+    The function loads cleaned data set.
 
-	# load cleaned data
+    Input:
+    database_filepath: path to cleaned data set
+
+    Output:
+    X: column of loaded data set containing messages
+    Y: columns of loaded data set containing categories of messages
+    category_names: names of categories
+    '''
+
+    # load cleaned data
     engine = create_engine('sqlite:///' + database_filepath)
     df = pd.read_sql_table('cleaned_data', engine)
 
@@ -49,17 +53,21 @@ def load_data(database_filepath):
 
 def tokenize(text):
 
-	'''
-	The function tokenizes input text.
-	Input  - text: text to be tokenized
-	Output - tokens: tokens of input text, transfomations include:
-				1) replacing urls with placeholder
-				2) normalization
-				3) removing punctuations
-				4) tokenize
-				5) removing stopwords
-				6) lemmatization
-	'''
+    '''
+    The function tokenizes input text.
+
+    Input:
+    text: text to be tokenized
+
+    Output:
+    tokens: tokens of input text, transfomations include:
+        1) replacing urls with placeholder
+        2) normalization
+        3) removing punctuations
+        4) tokenize
+        5) removing stopwords
+        6) lemmatization
+    '''
 
     # replace urls with urlplaceholder
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
@@ -80,11 +88,15 @@ def tokenize(text):
 
 def build_model():
 
-	'''
-	The function builds the machine learning model.
-	Input  - None
-	Output - pipeline: ML pipeline
-	'''
+    '''
+    The function builds the machine learning model.
+
+    Input: 
+    None
+
+    Output:
+    pipeline: ML pipeline
+    '''
 
     pipeline = Pipeline([
 
@@ -109,13 +121,18 @@ def build_model():
 
 def evaluate_model(model, X_test, Y_test, category_names):
 
-	'''
-	The function evaluates the model.
-	Input  - model: model to be evaluated
-			 X_text: test messages to be classified
-			 Y_text: categories of test messages
-			 category_names: names of classification categories
-	'''
+    '''
+    The function evaluates the model.
+
+    Input:
+    model: model to be evaluated
+    X_text: test messages to be classified
+    Y_text: categories of test messages
+    category_names: names of classification categories
+
+    Output:
+    None
+    '''
 
 	# get predicted categories
     Y_pred = model.predict(X_test)
@@ -126,12 +143,16 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 def save_model(model, model_filepath):
 
-	'''
-	The function saves constructed machine learning model as pickle file.
-	Input  - model: model to be saved
-			 model_filepath: path for saved model
-	Output - None
-	'''
+    '''
+    The function saves constructed machine learning model as pickle file.
+    
+    Input:
+    model: model to be saved
+    model_filepath: path for saved model
+    
+    Output:
+    None
+    '''
 
     pickle.dump(model, open(model_filepath, 'wb')) 
 
