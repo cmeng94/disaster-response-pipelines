@@ -7,24 +7,25 @@ from nltk.tokenize import word_tokenize
 
 from flask import Flask
 from flask import render_template, request, jsonify
-from plotly.graph_objs import Bar
-# from sklearn.externals import joblib
+from plotly import graph_objects
+# from plotly.graph_objects import Bar
 import joblib
 from sqlalchemy import create_engine
+from custom_transformer import tokenize, TextLengthExtractor
 
 
 app = Flask(__name__)
 
-def tokenize(text):
-    tokens = word_tokenize(text)
-    lemmatizer = WordNetLemmatizer()
+# def tokenize(text):
+#     tokens = word_tokenize(text)
+#     lemmatizer = WordNetLemmatizer()
 
-    clean_tokens = []
-    for tok in tokens:
-        clean_tok = lemmatizer.lemmatize(tok).lower().strip()
-        clean_tokens.append(clean_tok)
+#     clean_tokens = []
+#     for tok in tokens:
+#         clean_tok = lemmatizer.lemmatize(tok).lower().strip()
+#         clean_tokens.append(clean_tok)
 
-    return clean_tokens
+#     return clean_tokens
 
 # load data
 engine = create_engine('sqlite:///../data/DisasterResponse.db')
@@ -39,33 +40,88 @@ model = joblib.load("../models/classifier.pkl")
 @app.route('/index')
 def index():
     
-    # extract data needed for visuals
-    # TODO: Below is an example - modify to extract data for your own visuals
+    # create visuals
+    graphs = []
+
+    # graph 1
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
-    
-    # create visuals
-    # TODO: Below is an example - modify to create your own visuals
-    graphs = [
-        {
-            'data': [
-                Bar(
-                    x=genre_names,
-                    y=genre_counts
-                )
-            ],
 
-            'layout': {
-                'title': 'Distribution of Message Genres',
-                'yaxis': {
-                    'title': "Count"
-                },
-                'xaxis': {
-                    'title': "Genre"
+    graph1_data = []
+    graph1_data.append(
+        graph_objects.Pie(
+            labels = genre_names,
+            values = genre_counts,
+            marker = {
+                'colors': ['steelblue', 'darkseagreen', 'khaki'],
+                'line':{
+                    'color':'#FFFFFF', 
+                    'width': 1
                 }
             }
+        )
+    )
+
+    graph1_layout = {
+        'title': 'Distribution of Message Genres',
+    }
+
+    # graph 2
+    english_counts = df[df['message']==df['original']].shape[0]
+    other_counts = df.shape[0] - english_counts
+
+    graph2_data = []
+    graph2_data.append(
+        graph_objects.Pie(
+            labels = ['English', 'Other'],
+            values = [english_counts, other_counts],
+            marker = {
+                'colors': ['indigo', 'lightgrey']
+            }
+        )
+    )
+
+    graph2_layout = {
+        'title': 'Distribution of Message Languages'
+    }
+
+    # graph 3
+    category_count = df.iloc[:,4:].sum(axis=0).sort_values(ascending=False)
+    category_names = category_count.index
+    category_names = [x.replace('_', ' ') for x in category_names]
+
+    graph3_data = []
+    graph3_data.append(
+        graph_objects.Bar(
+            x = category_names,
+            y = category_count,
+            marker = {
+                'color': 'indianred'
+            }
+        )
+    )
+
+    graph3_layout = {
+        'title': 'Distribution of Message Categories',
+        'yaxis': {
+            'title': "Count", 
+            'type': "log"
+        },
+        'xaxis': {
+            'title': "Category", 
+            'tickangle': -45
+        },
+        'margin': {
+            'b': 150
         }
-    ]
+    }
+
+
+    graphs.append({'data': graph1_data, 'layout': graph1_layout})
+    graphs.append({'data': graph2_data, 'layout': graph2_layout})
+    graphs.append({'data': graph3_data, 'layout': graph3_layout})
+
+
     
     # encode plotly graphs in JSON
     ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
