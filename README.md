@@ -53,6 +53,9 @@ python3 app/run.py
 
 <a id='use'></a>
 ## 4. Usage
+With the Web App running, the user can submit a disaster message using the text box and click the *Classify Message* button to get classifcation results, for example:
+<img width="800" alt="screenshot2" src="https://user-images.githubusercontent.com/11303419/129133187-837253f2-e19b-4147-b8e3-251546af436f.png">
+
 
 <a id='contact'></a>
 ## 5. Contact
