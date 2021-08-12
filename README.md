@@ -46,16 +46,17 @@ python3 data/process_data.py data/disaster_messages.csv data/disaster_categories
 ```sh
 python3 models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 ```
-* To run the Web App, first execute the following line, then open your browser and visit [http://0.0.0.0:3001/](http://0.0.0.0:3001/).
+* To run the Web App, first execute the following line, then visit [http://0.0.0.0:3001/](http://0.0.0.0:3001/).
 ```sh
 python3 app/run.py
 ```
 
 <a id='use'></a>
 ## 4. Usage
-With the Web App running, the user can submit a disaster message using the text box and click the *Classify Message* button to get classifcation results, for example:
+With the Web App running, the user can submit a disaster message using the text box and click the *Classify Message* button to get classifcation results. For example, by submitting the following message:
 <img width="800" alt="screenshot2" src="https://user-images.githubusercontent.com/11303419/129133187-837253f2-e19b-4147-b8e3-251546af436f.png">
-
+one would get the following results:
+<img width="800" alt="screenshot3" src="https://user-images.githubusercontent.com/11303419/129133493-c3144e46-8948-4f4e-b1ef-4825fdd55e47.png">
 
 <a id='contact'></a>
 ## 5. Contact
