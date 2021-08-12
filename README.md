@@ -6,7 +6,7 @@
 3. [Getting Started](#start)
 4. [Usage](#use)
 5. [Contact](#contact)
-6. [Acknowledgement and License](#acknowledge)
+6. [Acknowledgement and Licensing](#acknowledge)
 
 
 <a id='intro'></a>
