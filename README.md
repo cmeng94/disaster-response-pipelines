@@ -1,7 +1,7 @@
 # Disaster Response Pipelines
 
 ## Table of Contents
-<li><a href="#intro">1. Project Description
+1. [Project Description](#intro)
 <li><a href="#files">2. File Descriptions
 <li><a href="#start">3. Getting Started
 <li><a href="#authors">4. Usage
@@ -11,7 +11,11 @@
 
 <a id='intro'></a>
 ## 1. Project Description
-The goal of this project is to analyze disaster message data and build a model that classifies disaster messages. The initial data sets (`disaster_messages.csv` and `disaster_categories.csv` in folder `data`) 
+The goal of this project is to analyze disaster message data and build a model that classifies disaster messages. The initial data sets contain pre-labeled messages that were sent during disaster events. This project uses NLP (natural language processing) and ML (machine learning) techniques to process and categorize disaster response messages.
+
+Components of this project include
+* an ETL pipeline that prepares and cleans data, 
+* an ML pipeline that transforms data using NLP techniques and builds an ML classification model, and a Web App that displays data visualizations and classifies new disaster messages.    
 
 ## 2. File Descriptions
 
