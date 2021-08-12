@@ -15,7 +15,7 @@ The goal of this project is to analyze disaster message data and build a model t
 
 Components of this project include
 * an ETL pipeline that cleans data and loads it into a database, 
-* an ML pipeline that transforms data using NLP techniques and builds an ML classification model, and 
+* an ML pipeline that transforms data using NLP and builds an ML classification model, and 
 * a Web App that displays data visualizations and classifies new disaster messages.    
 <img width="800" alt="screenshot1" src="https://user-images.githubusercontent.com/11303419/129129421-ec44aa2e-e08a-4033-85b6-4a6b55c37556.png">
 
