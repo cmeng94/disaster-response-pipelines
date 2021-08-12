@@ -66,6 +66,6 @@ the model classifies it to be in categories `"Related"`, `"Request"`, `"Aid Rela
 * Website: [https://sites.google.com/view/changmeng](https://sites.google.com/view/changmeng)
 
 <a id='acknowledge'></a>
-## 6. Acknowledgement and License
+## 6. Acknowledgement and Licensing
 This project is part of the [Data Science Nanodegree](https://www.udacity.com/course/data-scientist-nanodegree--nd025) program at [Udacity](https://www.udacity.com/). Disaster data is provided by [Figure Eight](https://appen.com/).
 
