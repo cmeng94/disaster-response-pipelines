@@ -46,11 +46,10 @@ python3 data/process_data.py data/disaster_messages.csv data/disaster_categories
 ```sh
 python3 models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 ```
-* To run the Web App, first execute the following line
+* To run the Web App, first execute the following line, then open your browser and visit [http://0.0.0.0:3001/](http://0.0.0.0:3001/).
 ```sh
 python3 app/run.py
 ```
-Then open your browser and go to [http://0.0.0.0:3001/](http://0.0.0.0:3001/)
 
 <a id='use'></a>
 ## 4. Usage
