@@ -2,11 +2,11 @@
 
 ## Table of Contents
 1. [Project Description](#intro)
-<li><a href="#files">2. File Descriptions
-<li><a href="#start">3. Getting Started
-<li><a href="#authors">4. Usage
-<li><a href="#results">5. Contact   
-<li><a href="#acknowledgement">6. Acknowledgement and License
+2. [File Descriptions](#files)
+3. [Getting Started](#start)
+4. [Usage](#use)
+5. [Contact](#contact)
+6. [Acknowledgement and License](#acknowledge)
 
 
 <a id='intro'></a>
@@ -15,16 +15,22 @@ The goal of this project is to analyze disaster message data and build a model t
 
 Components of this project include
 * an ETL pipeline that prepares and cleans data, 
-* an ML pipeline that transforms data using NLP techniques and builds an ML classification model, and a Web App that displays data visualizations and classifies new disaster messages.    
+* an ML pipeline that transforms data using NLP techniques and builds an ML classification model, and 
+* a Web App that displays data visualizations and classifies new disaster messages.    
 
+<a id='files'></a>
 ## 2. File Descriptions
 
+<a id='start'></a>
 ## 3. Getting Started
 ### Dependencies
 ### Installation
 
+<a id='use'></a>
 ## 4. Usage
 
+<a id='contact'></a>
 ## 5. Contact
 
+<a id='acknowledge'></a>
 ## 6. Acknowledgement and License
