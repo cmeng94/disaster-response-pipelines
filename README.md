@@ -30,7 +30,10 @@ Components of this project include
 <a id='start'></a>
 ## 3. Getting Started
 ### Dependencies
-The code is developed with Python 3.9 and is dependent on a number of python packages listed in `requirements.txt`.
+The code is developed with Python 3.9 and is dependent on a number of python packages listed in `requirements.txt`. To install required packages, run the following line in terminal:
+```sh
+pip3 install -r requirements.txt
+```
 
 ### Installation
 To run the code locally, create a copy of this GitHub repository by running the following code in terminal:
