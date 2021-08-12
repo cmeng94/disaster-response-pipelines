@@ -33,7 +33,7 @@ Components of this project include
 The code is developed with Python 3.9 and is dependent on a number of python packages listed in `requirements.txt`.
 
 ### Installation
-To run the code locally, create a copy of this GitHub repository using the following code in terminal:
+To run the code locally, create a copy of this GitHub repository by running the following code in terminal:
 ```sh
 git clone https://github.com/cmeng94/disaster-response-pipelines
 ```
