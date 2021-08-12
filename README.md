@@ -55,6 +55,7 @@ python3 app/run.py
 ## 4. Usage
 With the Web App running, the user can submit a disaster message using the text box and click the **Classify Message** button to get classifcation results. For example, by submitting the message `"We are trapped in house with no food or water!"`:
 <img width="800" alt="screenshot2" src="https://user-images.githubusercontent.com/11303419/129133187-837253f2-e19b-4147-b8e3-251546af436f.png">
+
 the model classifies it to be in categories `"Related"`, `"Request"`, `"Aid Related"`, `"Water"` and `"Food"`:
 <img width="800" alt="screenshot3" src="https://user-images.githubusercontent.com/11303419/129133493-c3144e46-8948-4f4e-b1ef-4825fdd55e47.png">
 
