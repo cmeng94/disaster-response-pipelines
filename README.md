@@ -22,6 +22,10 @@ Components of this project include
 
 <a id='files'></a>
 ## 2. File Descriptions
+* Data files: `data/disaster_messages.csv` and `data/disaster_categories.csv`
+* The ETL pipeline for data cleaning is prepared in `ETL_pipeline.ipynb` and then modularized in `data/process_data.py` for terminal execution.
+* The ML pipeline for data transfomation and classification is prepared in `ML_pipeline.ipynb` and then modularized in `models/train_classifier.py` and `models/custom_transformer.py` for terminal execution.
+* The Web App is contained in `app`, where `app/run.py` is the main execution file, and `app/templates` contain html files.
 
 <a id='start'></a>
 ## 3. Getting Started
