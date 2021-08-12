@@ -25,12 +25,18 @@ Components of this project include
 * Data files: `data/disaster_messages.csv` and `data/disaster_categories.csv`
 * The ETL pipeline for data cleaning is prepared in `ETL_pipeline.ipynb` and then modularized in `data/process_data.py` for terminal execution.
 * The ML pipeline for data transfomation and classification is prepared in `ML_pipeline.ipynb` and then modularized in `models/train_classifier.py` and `models/custom_transformer.py` for terminal execution.
-* The Web App is contained in `app`, where `app/run.py` is the main execution file, and `app/templates` contain html files.
+* The Web App is contained in `app`, where `app/run.py` is the main execution file, and `app/templates` contains html files.
 
 <a id='start'></a>
 ## 3. Getting Started
 ### Dependencies
+The code is developed with Python 3.9 and is dependent on a number of python packages listed in `requirements.txt`.
+
 ### Installation
+To run the code locally, clone this GitHub repository using the following code in terminal:
+```sh
+git clone https://github.com/cmeng94/disaster-response-pipelines
+```
 
 <a id='use'></a>
 ## 4. Usage
