@@ -17,7 +17,7 @@ Components of this project include
 * an ETL pipeline that prepares and cleans data, 
 * an ML pipeline that transforms data using NLP techniques and builds an ML classification model, and 
 * a Web App that displays data visualizations and classifies new disaster messages.    
-<img width="800" alt="screenshot1" src="https://user-images.githubusercontent.com/11303419/129128842-af9c3a87-1d3c-4190-a195-0f69c7c3ac7a.png">
+<img width="600" alt="screenshot1" src="https://user-images.githubusercontent.com/11303419/129129157-5db8c038-e882-4617-9c3b-2f9a4b338af6.png">
 
 <a id='files'></a>
 ## 2. File Descriptions
