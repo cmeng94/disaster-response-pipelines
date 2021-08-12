@@ -1,4 +1,4 @@
-# disaster-response-pipelines
+# Disaster Response Pipelines
 
 ## Table of Contents
 <li><a href="#intro">1. Project Description
@@ -11,6 +11,7 @@
 
 <a id='intro'></a>
 ## 1. Project Description
+The goal of this project is to analyze disaster message data and build a model that classifies disaster messages. The initial data sets (`disaster_messages.csv` and `disaster_categories.csv` in folder `data`) 
 
 ## 2. File Descriptions
 

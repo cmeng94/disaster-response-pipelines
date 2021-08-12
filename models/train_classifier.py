@@ -69,6 +69,17 @@ def build_model():
         ('clf', MultiOutputClassifier(RandomForestClassifier()))
     ])
 
+#    I understand how to tune parameters using GridSearchCV (please refer to ML_pipeline.ipynb and classification results therein in main folder), but for runtime considerations, I prefer not to run it in terminal.
+
+#    parameters = {
+#        'clf__estimator__n_estimators': [25, 50],
+#        'clf__estimator__max_depth': [300, 400],
+#        'clf__estimator__min_samples_split': [4, 6],
+#    }
+#
+#    cv = GridSearchCV(pipeline, para_grid = parameters)
+#    return cv
+
     return pipeline
 
 
